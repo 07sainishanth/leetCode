@@ -1,3 +1,4 @@
+class LFUCache {
 int cap;
     int size;
     int minFreq;
@@ -18,13 +19,13 @@ public:
         fm[m[key].second].push_back(key);
         mIter[key]=--fm[m[key].second].end();
         
-        if(fm[minFreq].size()==0 )
+        if(fm[minFreq].size()==0 ) 
               minFreq++;
         
         return m[key].first;
     }
     
-   void set(int key, int value) {
+   void put(int key, int value) {
         if(cap<=0) return;
         
         int storedValue=get(key);
@@ -49,3 +50,11 @@ public:
         size++;
     }
 };
+
+
+/**
+ * Your LFUCache object will be instantiated and called as such:
+ * LFUCache* obj = new LFUCache(capacity);
+ * int param_1 = obj->get(key);
+ * obj->put(key,value);
+ */
