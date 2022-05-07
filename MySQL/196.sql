@@ -1,8 +1,3 @@
-# Please write a DELETE statement and DO NOT write a SELECT statement.
 # Write your MySQL query statement below
 
-delete from Person where id not in( 
-    select t.id from (
-        select min(id) as id from Person group by email
-    ) t
-)
+select user_id, concat(upper(substr(name,1,1)), lower(substr(name,2))) as name from Users order by User_id asc;
