@@ -33,3 +33,7 @@
 *.app
 
 .vscode/
+.DS_Store
+
+# byte code
+__pycache__/
