@@ -1,8 +1,15 @@
+from _20_Valid_Parentheses import Solution as Solution20
 from _121_Best_Time_to_Buy_and_Sell_Stock import Solution as Solution121
 from _242_Valid_Anagram import Solution as Solution242
 
 # from '217' import Solution as Solution217
 
+def execute20():
+    sol = Solution20()
+    nums1 = "()[]{}"
+    nums2 = '{{(])}}'
+    print(nums1, sol.isValid(nums1))
+    print(nums2, sol.isValid(nums2))
 
 def execute121():
     sol = Solution121()
@@ -31,6 +38,7 @@ def execute242():
 
 
 
+execute20()
 # execute121()
-execute242()
+# execute242()
     
